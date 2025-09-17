@@ -1,8 +1,8 @@
 package Grimaldi.Tormenta20Ds.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,14 +21,14 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Usuarios {
+public class Usuarios implements Serializable {
     
     private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private long id;
-    private String Nome;
+    private String Email;
     private String Senha;
 
     @OneToMany
